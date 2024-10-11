@@ -17,16 +17,16 @@ jobs:
     - name: Set up Docker Buildx
       uses: docker/setup-buildx-action@v2  # Update to v2 (latest)
     
-    # - name: Log in to Docker Hub
-    #   run: docker login -u ${{ secrets.USERNAME }} -p ${{ secrets.PASSWORD }}
-      # uses: docker/login-action@v3  # Ensure this is up to date
-      # with:
-      #   username: ${{ secrets.USERNAME 
-      #   password: ${{ secrets.PASSWORD 
+    - name: Log in to Docker Hub
+    
+      uses: docker/login-action@v3  # Ensure this is up to date
+      with:
+        username: ${{ secrets.USERNAME }}
+        password: ${{ secrets.PASSWORD }}
 
     - name: Build and push Docker image
       uses: docker/build-push-action@v4  # Update to the latest version
       with:
         push: true
-        tags: rajastriker/my-image:latest
+        tags: rajastriker786/my-image:latest
 
