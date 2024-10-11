@@ -25,7 +25,7 @@ jobs:
         password: ${{ secrets.PASSWORD }}
 
     - name: Build and push Docker image
-      uses: docker/build-push-action@v4  # Update to the latest version
+      uses: docker/build-push-action@v5  # Update to the latest version
       with:
         push: true
         tags: rajastriker786/my-image:latest
