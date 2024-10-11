@@ -28,5 +28,5 @@ jobs:
       uses: docker/build-push-action@v5  # Update to the latest version
       with:
         push: true
-        tags: rajastriker786/bulbul
+        tags: rajastriker786/bulbul:latest
 
